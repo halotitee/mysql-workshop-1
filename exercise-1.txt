@@ -14,3 +14,36 @@ Exercise 3
 Exercise 4
     SHOW DATABASES;
     
+Exercise 5-8
+    USE decodemtl_addressbook
+    CREATE TABLE Account (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        email VARCHAR(255),
+        password VARCHAR(50),
+        createOn DATETIME,
+        modifiedOn DATETIME
+    );
+    
+    CREATE TABLE AddressBook (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        accountId INT,
+        name VARCHAR(255),
+        createOn DATETIME,
+        modifiedOn DATETIME
+    );
+    
+    CREATE TABLE Entry (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        addressBookId INT,
+        firstName VARCHAR(255),
+        lastName VARCHAR(255),
+        birthday DATETIME,
+        type ENUM('home', 'work', 'other'),
+        subtype ENUM('phone', 'address', 'email'),
+        contentLineOne VARCHAR(255),
+        contentLineTwo VARCHAR(255),
+        contentLineThree VARCHAR(255),
+        contentLineFour VARCHAR(255),
+        contentLineFive VARCHAR(255)
+    );
+    
