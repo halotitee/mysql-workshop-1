@@ -11,3 +11,6 @@ Exercise 2
 Exercise 3
     DROP DATABASE decodemtl_test;
     
+Exercise 4
+    SHOW DATABASES;
+    
