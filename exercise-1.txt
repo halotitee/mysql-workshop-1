@@ -5,6 +5,9 @@ Exercise 1
     result: MySQL connected to moreseed
 
 Exercise 2
-    create database decodemtl_test;
-    create database decodemtl_addressbook;
+    CREATE DATABASE decodemtl_test;
+    CREATE DATABASE decodemtl_addressbook;
+    
+Exercise 3
+    DROP DATABASE decodemtl_test;
     
