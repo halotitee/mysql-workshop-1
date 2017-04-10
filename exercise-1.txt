@@ -1,0 +1,10 @@
+Exercise 1
+    mysql-ctl start
+    mysql -uMORESEED
+    
+    result: MySQL connected to moreseed
+
+Exercise 2
+    create database decodemtl_test;
+    create database decodemtl_addressbook;
+    
