@@ -29,4 +29,19 @@ EXERCISE 7
 EXERCISE 8
     ALTER TABLE Entry ADD COLUMN (addressBookId INT, firstName VARCHAR(255), lastName VARCHAR(255), birthday DATETIME, type ENUM('home','work','other'), subtype ENUM('phone','address','email'), contentLineOne VARCHAR(255), contentLineTwo VARCHAR(255), contentLineThree VARCHAR(255), contentLineFour VARCHAR(255), contentLineFive VARCHAR(255));
 
+EXERCISE 9
+    CREATE DATABASE barn;
+    USE barn
+    CREATE TABLE checkrensLog (id INT AUTO_INCREMENT PRIMARY KEY, checkrenType ENUM('rooster', 'hen', 'chicks'), bornOnDate DATETIME, goneOnDate DATETIME);
+    
+    SELECT checkrenType, COUNT(*) as total //SELECT + type
+    FROM chickensLog // FROM + TABLE_NAME
+    WHERE bornOnDate <= NOW() AND goneOnDate > NOW() // This is to count all the chickens during this period
+    GROUPE BY checkrenType // This is to sort out the types;
+    
+    SELECT checkrenType, count(*) as total, DATE_ADD(bornOnDate, INTERVAL 21 DAY) as grownupDate
+    FROM chickensLog
+    WHERE grounupDate < "a specific date";
+    
+
     
